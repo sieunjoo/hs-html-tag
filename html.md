@@ -1,83 +1,133 @@
-# HTML 주요 태그 정리
+물론이야. 자주 사용하는 **HTML 태그**를 용도별로 표로 정리하면 아래와 같아.
 
-### 1. 문서 구조 및 기본 태그
-웹페이지의 뼈대를 구성하는 기본 태그들입니다.
+ ## 1\. 문서 기본 구조
 
-| 태그 | 설명 | 예시 |
-| :--- | :--- | :--- |
-| `<!DOCTYPE html>` | HTML5 문서임을 선언합니다. (태그가 아님) | `<!DOCTYPE html>` |
-| `<html>` | HTML 문서의 시작과 끝을 알립니다. | `<html> ... </html>` |
-| `<head>` | 문서의 메타데이터(제목, 스타일, 스크립트 등)를 담습니다. | `<head> <title>제목</title> </head>` |
-| `<body>` | 웹페이지에 실제로 표시되는 모든 콘텐츠를 담습니다. | `<body> 내용 </body>` |
+ | 태그 | 용도 | 예시 |
+| --- | --- | --- |
+| `<html>` | HTML 문서의 최상위 요소 | `<html>...</html>` |
+| `<head>` | 문서의 메타정보 영역 | `<head>...</head>` |
+| `<body>` | 실제 화면에 표시되는 내용 | `<body>...</body>` |
+| `<title>` | 브라우저 탭의 제목 | `<title>페이지 제목</title>` |
+| `<meta>` | 문자셋, viewport 등 메타정보 | `<meta charset="UTF-8">` |
+| `<link>` | 외부 CSS 등의 리소스 연결 | `<link rel="stylesheet" href="style.css">` |
+| `<style>` | HTML 내부에 CSS 작성 | `<style>p { color:red; }</style>` |
+| `<script>` | JavaScript 삽입/연결 | `<script src="app.js"></script>` |
 
----
+## 2\. 텍스트 관련
 
-### 2. 텍스트 콘텐츠 태그
-문장, 제목, 단락 등의 텍스트를 구조화할 때 사용합니다.
+ | 태그 | 용도 | 예시 |
+| --- | --- | --- |
+| `<h1>` \~ `<h6>` | 제목 | `<h1>제목</h1>` |
+| `<p>` | 문단 | `<p>내용입니다.</p>` |
+| `<br>` | 줄바꿈 | `안녕<br>하세요` |
+| `<hr>` | 수평 구분선 | `<hr>` |
+| `<strong>` | 중요함을 의미하는 강조 | `<strong>중요</strong>` |
+| `<b>` | 굵게 표시 | `<b>굵은 글씨</b>` |
+| `<em>` | 강조 | `<em>강조</em>` |
+| `<i>` | 관용적으로 기울임 표시 | `<i>italic</i>` |
+| `<small>` | 작은 글씨 | `<small>부가 정보</small>` |
+| `<mark>` | 형광펜처럼 강조 | `<mark>검색어</mark>` |
+| `<del>` | 삭제된 내용 | `<del>삭제</del>` |
+| `<ins>` | 추가된 내용 | `<ins>추가</ins>` |
+| `<sub>` | 아래 첨자 | `H<sub>2</sub>O` |
+| `<sup>` | 위 첨자 | `x<sup>2</sup>` |
+| `<code>` | 코드 표현 | `<code>console.log()</code>` |
+| `<pre>` | 공백/줄바꿈을 그대로 표시 | `<pre>...</pre>` |
+| `<blockquote>` | 긴 인용문 | `<blockquote>인용문</blockquote>` |
 
-| 태그 | 설명 | 예시 |
-| :--- | :--- | :--- |
-| `<h1>` ~ `<h6>` | 제목(Heading)을 나타냅니다. 숫자가 작을수록 중요한 큰 제목입니다. | `<h1>가장 큰 제목</h1>` |
-| `<p>` | 하나의 문단(Paragraph)을 만듭니다. | `<p>이것은 문단입니다.</p>` |
-| `<br>` | 줄바꿈(Line Break)을 합니다. (닫는 태그 없음) | `첫 번째 줄<br>두 번째 줄` |
-| `<hr>` | 수평 줄(Horizontal Rule)을 그어 주제를 구분합니다. | `<hr>` |
-| `<strong>` / `<b>` | 텍스트를 **굵게** 표시합니다. (`strong`은 중요한 의미 부여) | `<strong>중요한 텍스트</strong>` |
-| `<em>` / `<i>` | 텍스트를 *기울여서* 강조합니다. | `<em>기울인 텍스트</em>` |
+## 3\. 링크 & 미디어
 
----
+ | 태그 | 용도 | 예시 |
+| --- | --- | --- |
+| `<a>` | 하이퍼링크 | `<a href="https://example.com">링크</a>` |
+| `<img>` | 이미지 | `<img src="image.jpg" alt="설명">` |
+| `<audio>` | 오디오 | `<audio controls>...</audio>` |
+| `<video>` | 비디오 | `<video controls>...</video>` |
+| `<source>` | 미디어 파일 지정 | `<source src="video.mp4">` |
+| `<iframe>` | 다른 웹페이지/콘텐츠 삽입 | `<iframe src="..."></iframe>` |
+| `<figure>` | 이미지·도표 등의 독립적인 콘텐츠 | `<figure>...</figure>` |
+| `<figcaption>` | figure의 설명 | `<figcaption>이미지 설명</figcaption>` |
 
-### 3. 링크 및 미디어 태그
-다른 페이지로 이동하거나 이미지, 오디오, 비디오 등을 삽입할 때 사용합니다.
+## 4\. 목록
 
-| 태그 | 설명 | 예시 |
-| :--- | :--- | :--- |
-| `<a>` | 다른 페이지나 사이트로 이동하는 하이퍼링크를 생성합니다. | `<a href="https://google.com">구글</a>` |
-| `<img>` | 이미지를 삽입합니다. (닫는 태그 없음) | `<img src="image.jpg" alt="설명">` |
-| `<video>` | 동영상 파일을 삽입합니다. | `<video src="movie.mp4" controls></video>` |
-| `<audio>` | 오디오 파일을 삽입합니다. | `<audio src="sound.mp3" controls></audio>` |
+ | 태그 | 용도 | 예시 |
+| --- | --- | --- |
+| `<ul>` | 순서 없는 목록 | `<ul><li>사과</li></ul>` |
+| `<ol>` | 순서 있는 목록 | `<ol><li>첫 번째</li></ol>` |
+| `<li>` | 목록 항목 | `<li>항목</li>` |
+| `<dl>` | 설명 목록 | `<dl>...</dl>` |
+| `<dt>` | 설명할 용어 | `<dt>HTML</dt>` |
+| `<dd>` | 용어에 대한 설명 | `<dd>웹 문서 구조...</dd>` |
 
----
+## 5\. 표
 
-### 4. 목록(List) 태그
-항목들을 순서가 있거나 없게 나열할 때 사용합니다.
+ | 태그 | 용도 | 예시 |
+| --- | --- | --- |
+| `<table>` | 표 전체 | `<table>...</table>` |
+| `<thead>` | 표의 머리글 영역 | `<thead>...</thead>` |
+| `<tbody>` | 표의 본문 영역 | `<tbody>...</tbody>` |
+| `<tfoot>` | 표의 바닥글 영역 | `<tfoot>...</tfoot>` |
+| `<tr>` | 행 | `<tr>...</tr>` |
+| `<th>` | 제목 셀 | `<th>이름</th>` |
+| `<td>` | 일반 데이터 셀 | `<td>홍길동</td>` |
+| `<caption>` | 표 제목 | `<caption>회원 목록</caption>` |
+| `colspan` | 여러 열을 하나로 합침 | `<td colspan="2">` |
+| `rowspan` | 여러 행을 하나로 합침 | `<td rowspan="2">` |
 
-| 태그 | 설명 | 예시 |
-| :--- | :--- | :--- |
-| `<ul>` | 순서가 없는 목록(Unordered List, 글머리 기호)을 만듭니다. | `<ul> <li>사과</li> </ul>` |
-| `<ol>` | 순서가 있는 목록(Ordered List, 숫자 매기기)을 만듭니다. | `<ol> <li>첫째</li> </ol>` |
-| `<li>` | 목록의 각 항목(List Item)을 정의합니다. (ul, ol 내부에서 사용) | `<li>항목 내용</li>` |
+## 6\. 폼(Form)
 
----
+ | 태그 | 용도 | 예시 |
+| --- | --- | --- |
+| `<form>` | 입력 양식 전체 | `<form>...</form>` |
+| `<input>` | 다양한 입력 필드 | `<input type="text">` |
+| `<textarea>` | 여러 줄 텍스트 입력 | `<textarea></textarea>` |
+| `<button>` | 버튼 | `<button>확인</button>` |
+| `<label>` | 입력 요소의 설명 | `<label for="name">이름</label>` |
+| `<select>` | 선택 목록 | `<select>...</select>` |
+| `<option>` | 선택 목록의 항목 | `<option>서울</option>` |
+| `<optgroup>` | option 그룹화 | `<optgroup label="지역">` |
+| `<fieldset>` | 폼 요소 그룹화 | `<fieldset>...</fieldset>` |
+| `<legend>` | fieldset의 제목 | `<legend>회원정보</legend>` |
+| `<datalist>` | 입력 자동완성 목록 | `<datalist>...</datalist>` |
+| `<output>` | 계산 결과 등의 출력 | `<output>100</output>` |
 
-### 5. 표(Table) 태그
-표 형태의 데이터를 정리할 때 사용합니다.
+## 7\. 시맨틱(Semantic) 태그
 
-| 태그 | 설명 | 예시 |
-| :--- | :--- | :--- |
-| `<table>` | 표 전체를 감싸는 컨테이너입니다. | `<table> ... </table>` |
-| `<tr>` | 표의 가로 행(Table Row)을 정의합니다. | `<tr> ... </tr>` |
-| `<th>` | 표의 제목 셀(Table Header)을 정의합니다. (굵고 가운데 정렬) | `<th>제목</th>` |
-| `<td>` | 표의 일반 데이터 셀(Table Data)을 정의합니다. | `<td>내용</td>` |
+ HTML5에서 **콘텐츠의 의미와 구조를 명확하게 표현**할 때 사용하는 태그들이야.
 
----
+ | 태그 | 용도 |
+| --- | --- |
+| `<header>` | 페이지 또는 영역의 머리말 |
+| `<nav>` | 내비게이션 영역 |
+| `<main>` | 페이지의 주요 콘텐츠 |
+| `<section>` | 주제별 콘텐츠 영역 |
+| `<article>` | 독립적인 콘텐츠 |
+| `<aside>` | 본문과 간접적으로 관련된 콘텐츠 |
+| `<footer>` | 페이지 또는 영역의 바닥글 |
+| `<address>` | 연락처 정보 |
+| `<details>` | 펼치고 접을 수 있는 상세 내용 |
+| `<summary>` | `<details>`의 제목 |
 
-### 6. 영역 분할 및 레이아웃 태그
-웹페이지의 구역을 나누거나 디자인을 적용할 때 묶어주는 용도로 사용합니다.
+## 8\. 컨테이너 / 인라인 요소
 
-| 태그 | 설명 | 예시 |
-| :--- | :--- | :--- |
-| `<div>` | 블록 레벨(줄바꿈 됨)로 영역을 묶습니다. (주로 레이아웃용) | `<div> ... </div>` |
-| `<span>` | 인라인 레벨(줄바꿈 안 됨)로 특정 텍스트를 묶습니다. | `<span> ... </span>` |
+ | 태그 | 용도 | 특징 |
+| --- | --- | --- |
+| `<div>` | 콘텐츠를 그룹화 | 블록 요소 |
+| `<span>` | 텍스트 등을 그룹화 | 인라인 요소 |
 
----
+예를 들어:
 
-### 7. 입력 및 폼(Form) 태그
-사용자로부터 입력을 받아 서버로 전송할 때 사용합니다.
+```
+<div>
+  <h2>회원 정보</h2>
+  <p>이름: <span>홍길동</span></p>
+</div>
+```
 
-| 태그 | 설명 | 예시 |
-| :--- | :--- | :--- |
-| `<form>` | 사용자 입력 데이터를 서버로 보내는 폼 전체를 감쌉니다. | `<form action="/login"> ... </form>` |
-| `<input>` | 텍스트, 비밀번호, 체크박스 등 다양한 입력을 받습니다. | `<input type="text" placeholder="아이디">` |
-| `<textarea>` | 여러 줄의 긴 텍스트를 입력받는 입력창을 만듭니다. | `<textarea>기본 내용</textarea>` |
-| `<button>` | 클릭 가능한 버튼을 만듭니다. | `<button>제출</button>` |
-| `<label>` | 입력 요소(`input` 등)의 이름을 설명하는 라벨을 붙입니다. | `<label>아이디 <input type="text"></label>` |
+ ### ⭐ 우선적으로 외워둘 태그
+
+ HTML을 처음 배우는 단계라면 우선 이것부터 익히면 좋아.
+
+ `html` → `head` → `body` → `h1~h6` → `p` → `a` → `img` → `ul/ol/li` → `div` → `span` → `form/input/button` → `table/tr/th/td` → `header/nav/main/section/article/footer`
+
+ 그리고 **`<b>`와 `<strong>`, `<i>`와 `<em>`처럼 비슷해 보이는 태그의 차이**와 **시맨틱 태그를 언제 사용해야 하는지**를 이해하면 HTML을 훨씬 제대로 사용할 수 있어.
